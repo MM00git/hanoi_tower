@@ -1,0 +1,100 @@
+/* styles.css */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    font-weight: 700;
+    color: #333;
+}
+
+.controls {
+    margin-bottom: 20px;
+}
+
+.controls label {
+    margin-right: 10px;
+    font-weight: 400;
+}
+
+input[type="number"] {
+    padding: 5px;
+    font-size: 16px;
+    width: 60px;
+    margin-right: 10px;
+}
+
+.btn {
+    background-color: #0000ff;
+    color: #fff;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 10px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+#game {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tower {
+    width: 200px;
+    height: 300px;
+    border: 2px solid #007bff;
+    margin: 0 10px;
+    position: relative;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+}
+
+.disk {
+    height: 20px;
+    border: 1px solid #a9a9a9;
+    position: absolute;
+    bottom: 0;
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: bottom 0.2s, width 0.3s, background-color 0.3s;
+    cursor: pointer;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.disk:nth-child(even) {
+    background-color: #4682b4;
+}
+
+.disk:nth-child(odd) {
+    background-color: #ff6347;
+}
+
+p {
+    font-weight: 700;
+    color: #333;
+    font-size: 18px;
+}

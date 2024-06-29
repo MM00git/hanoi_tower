@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ハノイの塔ゲーム</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>ハノイの塔ゲーム</h1>
+        <div class="controls">
+            <label for="numDisks">ディスクの枚数: </label>
+            <input type="number" id="numDisks" min="3" max="10" value="3">
+            <button class="btn" onclick="startGame()">開始</button>
+            <button class="btn" onclick="resetGame()">リセット</button>
+        </div>
+        <div id="game">
+            <div id="tower1" class="tower" data-id="1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div id="tower2" class="tower" data-id="2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div id="tower3" class="tower" data-id="3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+        <p>移動回数: <span id="moveCount">0</span></p>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
